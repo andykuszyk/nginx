@@ -1,8 +1,12 @@
 sudo: required
 services:
-    - docker
+- docker
 before_script:
-    - chmod +x ./build.sh
-    - docker login -u $dockerhubuser -p $dockerhubpassword docker.io
+- chmod +x ./build.sh
+- docker login -u $dockerhubuser -p $dockerhubpassword docker.io
 script:
-    - "./build.sh"
+- "./build.sh"
+before_install:
+- openssl aes-256-cbc -K $encrypted_ca35e2204679_key -iv $encrypted_ca35e2204679_iv
+  -in id_rsa.pub.enc -out id_rsa.pub -d
+- chmod 700 id_rsa.pub
