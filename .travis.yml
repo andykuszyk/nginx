@@ -9,4 +9,4 @@ script:
 before_install:
 - openssl aes-256-cbc -K $encrypted_9ce6b78e5f8c_key -iv $encrypted_9ce6b78e5f8c_iv
   -in id_rsa.enc -out id_rsa -d
-- chmod 700 id_rsa.pub
+- chmod 700 id_rsa
