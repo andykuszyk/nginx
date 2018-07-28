@@ -1,0 +1,10 @@
+version: "3"
+services:
+    nginx:
+        image: andykuszyk/nginx:[version]
+        ports: 
+            - "80:80"
+        networks:
+            - net
+networks:
+    net:
