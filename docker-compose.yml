@@ -6,5 +6,7 @@ services:
             - "80:80"
         networks:
             - net
+        volumes:
+            - /root/certs-data/:/data/letsencrypt/
 networks:
     net:
