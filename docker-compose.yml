@@ -4,6 +4,7 @@ services:
         image: andykuszyk/nginx:[version]
         ports: 
             - "80:80"
+            - "443:443"
         networks:
             - net
         volumes:
