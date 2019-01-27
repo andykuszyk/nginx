@@ -8,5 +8,6 @@ services:
             - net
         volumes:
             - /root/certs-data/:/data/letsencrypt/
+            - /etc/letsencrypt/:/etc/letsencrypt/
 networks:
     net:
